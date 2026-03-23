@@ -1,13 +1,91 @@
+/* RESET + BASE */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f0ff, #e9d5ff);
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ROOT centré */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* CONTENU PRINCIPAL */
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
+  text-align: center;
+}
+
+/* NAVIGATION */
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7c3aed;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #4c1d95;
+}
+
+/* INPUT MODERNE */
+input {
+  width: 85%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #f3e8ff;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px #a78bfa;
+  background: #ede9fe;
+}
+
+/* BOUTON MODERNE */
+button {
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(124, 58, 237, 0.4);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* TITRES */
+h1, h2 {
+  color: #5b21b6;
 }

@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, Route, Link } from 'react-router-dom';
+import PageAccueil from './PageAccueil';
+import PageApropos from './PageApropos';
+import Connexion from './Connexion';
+import ListeTaches from './ListeTaches';
+import Logo from './Logo';
+import FonctionLecteurAudio from './FonctionLecteurAudio';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav>
+        <Link to="/">Accueil</Link> |{" "}
+
+        <Link to="/apropos">À propos</Link>
+      </nav>
+        <Connexion />
+         <ListeTaches />
+           <FonctionLecteurAudio />
+               <Logo />
+      <Routes>
+        <Route path="/" element={<PageAccueil />} />
+        <Route path="/apropos" element={<PageApropos />} />
+      </Routes>
     </div>
   );
 }
+
 
 export default App;
